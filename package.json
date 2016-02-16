@@ -68,7 +68,7 @@
     "validate-commit-message": "3.0.1"
   },
   "dependencies": {
-    "@most/hold": "^1.1.0",
+    "@most/hold": "1.1.0",
     "switch-path": "1.1.3"
   }
 }
