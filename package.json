@@ -1,6 +1,6 @@
 {
   "name": "@motorcycle/router",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A router driver built on top of @motorcycle/history",
   "main": "lib/index.js",
   "scripts": {
