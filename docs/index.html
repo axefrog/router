@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#createHref'
+                class='block bold'>
+                createHref
+              </a>
+              <a
+                href='#createLocation'
+                class='block bold'>
+                createLocation
+              </a>
+              <a
+                href='#createServerHistory'
+                class='block bold'>
+                createServerHistory
+              </a>
+              <a
+                href='#define'
+                class='block bold'>
+                define
+              </a>
+              <a
+                href='#defineAPI'
+                class='block bold'>
+                defineAPI
+              </a>
+              <a
+                href='#makeRouterDriver'
+                class='block bold'>
+                makeRouterDriver
+              </a>
+              <a
+                href='#path'
+                class='block bold'>
+                path
+              </a>
+              <a
+                href='#routerAPI'
+                class='block bold'>
+                routerAPI
+              </a>
+              <a
+                href='#routerDriver'
+                class='block bold'>
+                routerDriver
+              </a>
+              <a
+                href='#supportsHistory'
+                class='block bold'>
+                supportsHistory
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='createHref' class='mt0'>
+    createHref<span class='gray'>(path)</span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/util.js#L52-L58'><code>src/util.js</code></a></p>
+  <p>Function used to create HREFs that are properly namespaced</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>path</strong>
+          :
+          <div class='force-inline'>
+            <p>the HREF that will be appended to the current
+namespace</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>a fully qualified HREF composed from the current
+namespace and the path provided</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='createLocation' class='mt0'>
+    createLocation<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/index.js#L28-L28'><code>src/index.js</code></a></p>
+  <p><a href="https://motorcyclejs.github.io/history/docs#createLocation">createLocation() as defined by @motorcycle/history</a></p>
+
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='createServerHistory' class='mt0'>
+    createServerHistory<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/index.js#L10-L10'><code>src/index.js</code></a></p>
+  <p><a href="https://motorcyclejs.github.io/history/docs#createServerHistory">createServerHistory() as defined by @motorcycle/history</a></p>
+
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='define' class='mt0'>
+    define<span class='gray'>(definitions)</span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/definitionResolver.js#L60-L93'><code>src/definitionResolver.js</code></a></p>
+  <p>Function used to match the current route to a set of routes using
+switch-path</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>definitions</strong>
+          :
+          <div class='force-inline'>
+            <p>Route definitions as expected by
+<a href="https://github.com/staltz/switch-path">switch-path</a></p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="#defineAPI">defineAPI</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='defineAPI' class='mt0'>
+    defineAPI<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/definitionResolver.js#L86-L91'><code>src/definitionResolver.js</code></a></p>
+  <p>Propeties and methods returned from define()</p>
+
+    <h4>Properties</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://nodejs.org/api/stream.html">Stream</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>> <strong>path$</strong>
+              :
+              <div class='force-inline'>
+                <p>a stream of the path matched
+by switch-path</p>
+
+              </div>
+            </li>
+        <li><code><a href="https://nodejs.org/api/stream.html">Stream</a></code><<code>any</code>> <strong>value$</strong>
+              :
+              <div class='force-inline'>
+                <p>a stream of the value matched
+by switchPath</p>
+
+              </div>
+            </li>
+        <li><code><a href="https://nodejs.org/api/stream.html">Stream</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>> <strong>fullPath$</strong>
+              :
+              <div class='force-inline'>
+                <p>a stream of the current
+url entirely unfiltered</p>
+
+              </div>
+            </li>
+        <li><code><a href="#createHref">createHref</a></code> <strong>createHref</strong>
+              :
+              <div class='force-inline'>
+                <p>method used to define nested HREFs</p>
+
+              </div>
+            </li>
+    </li>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='makeRouterDriver' class='mt0'>
+    makeRouterDriver<span class='gray'>(history)</span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/routerDriver.js#L13-L29'><code>src/routerDriver.js</code></a></p>
+  <p>Instantiates an new router driver function using a valid history object.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code> <strong>history</strong>
+          :
+          <div class='force-inline'>
+            <p>a valid history instance as defined by
+ractk/history. Should have <code>createLocation()</code>, <code>createHref()</code>, <code>listen()</code>,
+and <code>push()</code> methods.</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="#routerDriver">routerDriver</a></code></code>
+      :
+      <div class='force-inline'>
+        <p>The router driver function</p>
+
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='path' class='mt0'>
+    path<span class='gray'>(pathname)</span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/pathFilter.js#L46-L53'><code>src/pathFilter.js</code></a></p>
+  <p>Filters the current location to easily create nested routes</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> <strong>pathname</strong>
+          :
+          <div class='force-inline'>
+            <p>the route at which to filter</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="#routerAPI">routerAPI</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='routerAPI' class='mt0'>
+    routerAPI<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/api.js#L33-L38'><code>src/api.js</code></a></p>
+  <p>The Public API returned by the router driver, createRouter(), and .path()</p>
+
+    <h4>Properties</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="#path">path</a></code> <strong>path</strong>
+              :
+              <div class='force-inline'>
+                <p>used for filtering routes to a given path</p>
+
+              </div>
+            </li>
+        <li><code><a href="#define">define</a></code> <strong>define</strong>
+              :
+              <div class='force-inline'>
+                <p>used for defining a set of routes to values via
+switch-path</p>
+
+              </div>
+            </li>
+        <li><code><a href="https://nodejs.org/api/stream.html">Stream</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Location">location</a></code>> <strong>observable</strong>
+              :
+              <div class='force-inline'>
+                <p>a way to get access to the
+current history$ from the historyDriver</p>
+
+              </div>
+            </li>
+        <li><code><a href="#createHref">createHref</a></code> <strong>createHref</strong>
+              :
+              <div class='force-inline'>
+                <p>a method for create HREFs that are properly
+prefixed for the current namespace</p>
+
+              </div>
+            </li>
+    </li>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='routerDriver' class='mt0'>
+    routerDriver<span class='gray'>(sink$)</span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/routerDriver.js#L25-L28'><code>src/routerDriver.js</code></a></p>
+  <p>The actual router driver.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://nodejs.org/api/stream.html">Stream</a></code><<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code> or <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>> <strong>sink$</strong>
+          :
+          <div class='force-inline'>
+            <p>This is the same input that the
+history driver would expect.</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="#routerAPI">routerAPI</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='supportsHistory' class='mt0'>
+    supportsHistory<span class='gray'></span>
+  </h2>
+    <p><a href='https://github.com/motorcyclejs/router/blob/a1df0e5906838f3e9e36b419752687de9f0cedd8/src/index.js#L19-L19'><code>src/index.js</code></a></p>
+  <p><a href="https://motorcyclejs.github.io/history/docs#supportsHistory">supportsHistory() as defined by @motorcycle/history</a></p>
+
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
