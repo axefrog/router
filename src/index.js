@@ -7,7 +7,7 @@ export {makeRouterDriver} from './routerDriver'
  * @external createServerHistory()
  * @see https://motorcyclejs.github.io/history/docs#createServerHistory
  */
-export {createServerHistory} from '@motrcycle/history'
+export {createServerHistory} from '@motorcycle/history'
 
 /**
  * [supportsHistory() as defined by @motorcycle/history](
