@@ -59,22 +59,25 @@ function makeDefinitionResolver(history$, namespace) {
    */
   return function define(definitions) {
     const matches$ = history$.map(
-      ({pathname}) => {
-        const filteredPath = `/${filterPath(splitPath(pathname), namespace)}`
+      ({pathname: fullPath}) => {
+        const filteredPath = `/${filterPath(splitPath(fullPath), namespace)}`
         const {path, value} = getPathValue(filteredPath, definitions)
-        return {path, value, pathname}
+        return {path, value, fullPath}
       }
     ).multicast()
 
-    const path$ = hold(matches$.map(({path}) => path))
-    const value$ = hold(matches$.map(({value}) => value))
-    const fullPath$ = hold(matches$.map(({pathname}) => pathname))
+    const match$ = hold(matches$)
+    const path$ = match$.map(({path}) => path)
+    const value$ = match$.map(({value}) => value)
+    const fullPath$ = match$.map(({fullPath}) => fullPath)
 
     /**
      * Propeties and methods returned from define()
      * @typedef {defineAPI}
      * @name defineAPI
      * @type {Object}
+     * @prop {Stream<Object>} match$ - a stream of the path, value and fullPath
+     * matched by switch-path
      * @prop {Stream<string>} path$ - a stream of the path matched
      * by switch-path
      * @prop {Stream<any>} value$ - a stream of the value matched
@@ -84,6 +87,7 @@ function makeDefinitionResolver(history$, namespace) {
      * @prop {createHref} createHref - method used to define nested HREFs
      */
     const defineAPI = {
+      match$,
       path$,
       value$,
       fullPath$,
